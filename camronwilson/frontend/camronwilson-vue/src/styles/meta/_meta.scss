@@ -1,0 +1,8 @@
+$thin-size: 1250px;
+$mobile-size: 800px;
+
+@mixin responsive($breakpoint) {
+    @media screen and (max-width: $breakpoint) {
+        @content;
+    }
+}

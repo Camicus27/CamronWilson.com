@@ -1,0 +1,74 @@
+@use '../meta' as *;
+
+* {
+  font-family: 'Noto Sans', sans-serif;
+  line-height: 1.25rem;
+}
+
+html { 
+  overflow-y: auto !important;
+}
+
+code {
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+strong {
+  font-weight: bold;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.wrapper {
+  margin-inline: 3rem;
+  margin-block: 1rem;
+
+  @include responsive($mobile-size) {
+    margin-inline: 1rem;
+  }
+}
+
+h1 {
+  margin-block: .25rem;
+  font-size: 2.75rem;
+  line-height: 3rem;
+  color: $purple-dark;
+  text-align: center;
+
+  @include responsive($mobile-size) {
+    font-size: 2rem;
+    line-height: 2.25rem;
+  }
+}
+
+header p {
+  font-size: 1.5rem;
+
+  @include responsive($mobile-size) {
+    font-size: 1.2rem;
+  }
+}
+
+h2 {
+  margin-block: .25rem;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  color: $purple;
+  text-align: center;
+
+  @include responsive($mobile-size) {
+    font-size: 1.33rem;
+    line-height: 1.5rem;
+  }
+}
+
+p {
+  @include responsive($mobile-size) {
+    font-size: 0.85rem;
+    line-height: 1.1rem;
+  }
+}

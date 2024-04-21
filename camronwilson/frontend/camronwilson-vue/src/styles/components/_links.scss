@@ -1,0 +1,20 @@
+@use "../meta" as *;
+
+.link {
+    cursor: pointer;
+    transition: color 0.3s;
+    &:any-link {
+        margin-inline: .15rem;
+        font-weight: bold;
+        color: $link;
+        text-shadow: 0px 0px 1px $shadow;
+        text-decoration: none;
+    }
+    &:active {
+        color: darken($link, 15);
+    }
+    &:hover {
+        color: lighten($link, 10);
+        text-decoration: underline;
+    }
+}

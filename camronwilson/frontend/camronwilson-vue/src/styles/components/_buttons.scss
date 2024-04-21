@@ -1,0 +1,56 @@
+@use "../meta" as *;
+
+@mixin round-button($text-color, $background-color) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+    color: $text-color;
+    background-color: $background-color;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    text-decoration: none;
+
+    cursor: pointer;
+    transition:
+        background-color 0.3s,
+        color 0.3s;
+
+    &:hover {
+        background-color: lighten($background-color, 10);
+        color: darken($text-color, 10);
+    }
+}
+
+.nav-button {
+    padding: .5rem;
+    margin: .25rem;
+    border-radius: 2px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: 0px 0px 1px $shadow;
+    text-decoration: none;
+    color: $purple-dark;
+    border-radius: 4px;
+    transition:
+        background-color 0.3s,
+        color 0.3s;
+    &:hover {
+        color: $text-light;
+        background-color: $purple-darker;
+    }
+    &:active {
+        color: $accent;
+    }
+
+    @include responsive($thin-size) {
+        font-size: 1.15rem;
+    }
+
+    @include responsive($mobile-size) {
+        padding: .2rem .25rem;
+        margin: .2rem .5rem;
+        font-size: 0.8rem;
+    }
+}
