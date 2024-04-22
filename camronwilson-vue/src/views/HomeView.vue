@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Bio from '../components/Bio.vue'
+import Bio from '@/components/Bio.vue'
 </script>
 
 <template>
