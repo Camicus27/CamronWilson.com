@@ -38,8 +38,14 @@ onMounted(async () => {
         </div>
         <div class="info-buttons-burger">
           <RouterLink to="/resume" class="nav-button">Resume</RouterLink>
-          <a class="nav-button" href="https://www.linkedin.com/in/camron-wilson/" target="_blank">LinkedIn</a>
-          <a class="nav-button" href="https://github.com/Camicus27" target="_blank">GitHub</a>
+          <a class="nav-button" href="https://www.linkedin.com/in/camron-wilson/" target="_blank">
+            LinkedIn
+            <v-icon icon="mdi-open-in-new" size="x-small"></v-icon>
+          </a>
+          <a class="nav-button" href="https://github.com/Camicus27" target="_blank">
+            GitHub
+            <v-icon icon="mdi-open-in-new" size="x-small"></v-icon>
+          </a>
         </div>
       </div>
     </v-menu>
@@ -47,24 +53,25 @@ onMounted(async () => {
     <!-- Desktop -->
     <nav v-else>
       <div class="nav-buttons">
-        <RouterLink to="/" class="nav-button">Home</RouterLink>
         <RouterLink to="/portfolio" class="nav-button">Portfolio</RouterLink>
         <RouterLink to="/photo-graphics" class="nav-button">Photography & Graphics</RouterLink>
         <RouterLink to="/camicus-games" class="nav-button">CamicusGames</RouterLink>
         <RouterLink to="/contact" class="nav-button">Contact Me</RouterLink>
       </div>
       <div class="info-buttons">
-        <RouterLink to="/resume" class="nav-button">
-          <img src="@/assets/icons/doc.png" class="icon-small" alt="Document icon" width="16" height="16">
-          Resume
+        <RouterLink to="/resume" class="nav-button has-icon">
+          <v-icon icon="mdi-file-document" size="small"></v-icon>
+          &nbsp;Resume&nbsp;
         </RouterLink>
-        <a class="nav-button" href="https://www.linkedin.com/in/camron-wilson/" target="_blank">
-          <img src="@/assets/icons/linkedin.png" class="icon-small" alt="LinkedIn icon" width="16" height="16">
-          LinkedIn
+        <a class="nav-button has-icon" href="https://www.linkedin.com/in/camron-wilson/" target="_blank">
+          <v-icon icon="mdi-linkedin" size="small" style="padding-top: 1px"></v-icon>
+          &nbsp;LinkedIn&nbsp;
+          <v-icon icon="mdi-open-in-new" size="x-small" style="padding-top: 1px"></v-icon>
         </a>
-        <a class="nav-button" href="https://github.com/Camicus27" target="_blank">
-          <img src="@/assets/icons/github.png" class="icon-small" alt="Github icon" width="16" height="16">
-          GitHub
+        <a class="nav-button has-icon" href="https://github.com/Camicus27" target="_blank">
+          <v-icon icon="mdi-github" size="small"></v-icon>
+          &nbsp;GitHub&nbsp;
+          <v-icon icon="mdi-open-in-new" size="x-small" style="padding-top: 1px"></v-icon>
         </a>
       </div>
     </nav>
@@ -81,7 +88,8 @@ header {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 1rem;
-  padding: .33rem 2.25rem;
+  padding-block: .4rem;
+  padding-inline: .5rem;
   width: 100%;
   border-bottom: 2px solid $purple-dark;
   background-image: linear-gradient(to top, $accent, $purple);
@@ -178,8 +186,10 @@ header {
 nav {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  flex-grow: 1;
+  justify-content: space-between;
   align-items: center;
+  margin-left: 1rem;
   font-size: 1.2rem;
 
   @include responsive($mobile-size) {
@@ -197,8 +207,16 @@ nav {
     border-left: 2px solid $purple-darker;
 
     a {
-      padding-block: .25rem;
+      padding-block: .2rem;
       margin-block: .2rem;
+      width: max-content;
+    }
+
+    .has-icon {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      font-size: 1rem;
     }
   }
 }

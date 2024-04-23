@@ -63,7 +63,7 @@ const items = [
   </v-carousel>
 
   <!-- Desktop -->
-  <v-carousel v-else class="carousel" height="800">
+  <v-carousel v-else class="carousel" height="700">
     <template v-slot:prev="{ props }">
       <v-btn
         aria-label="Previous Artwork"

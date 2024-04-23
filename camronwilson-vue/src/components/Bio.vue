@@ -47,7 +47,8 @@
 .image-container {
   display: block;
   float: left;
-  margin: 0 1.25rem 0 0;
+  margin: 0;
+  margin-right: 1.25rem;
   width: 30%;
 
   @include responsive($mobile-size) {
@@ -57,6 +58,7 @@
 
   img {
     width: 100%;
+    border-radius: 4px;
   }
 }
 
@@ -79,9 +81,8 @@ h1 {
   padding-bottom: 1rem;
 
   @include responsive($mobile-size) {
-    font-size: 1rem;
-    line-height: 1.5rem;
-    padding-bottom: 0.9rem;
+    font-size: 1.15rem;
+    line-height: 1.65rem;
   }
 }
 </style>
