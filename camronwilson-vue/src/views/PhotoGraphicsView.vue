@@ -79,7 +79,7 @@ import GraphicsCarousel from '@/components/GraphicsCarousel.vue'
 
 .descr-container {
   margin-block: 2rem;
-  width: 80%;
+  width: 65%;
 
   @include responsive($mobile-size) {
     width: 100%;
