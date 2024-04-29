@@ -3,63 +3,68 @@
 </script>
 
 <template>
-  <v-expansion-panels class="course-container">
-    <v-expansion-panel class="panel">
+  <div class="course-container">
+    <div class="course-info">
       <h3>
         <slot name="title"></slot>
       </h3>
       <h4>
         <slot name="course-number"></slot>
+        <slot name="external-link"></slot>
       </h4>
-      <slot name="external-link"></slot>
-      <v-expansion-panel-title class="panel-title">
-        <strong>View Course Description</strong>
-      </v-expansion-panel-title>
-      <v-expansion-panel-text class="panel-text">
-        <slot name="description"></slot>
-      </v-expansion-panel-text>
-    </v-expansion-panel>
-  </v-expansion-panels>
+    </div>
+    <v-expansion-panels flat tile>
+      <v-expansion-panel class="panel">
+        <v-expansion-panel-title class="panel-title">
+          <strong>View Course Description</strong>
+        </v-expansion-panel-title>
+        <v-expansion-panel-text class="panel-text">
+          <slot name="description"></slot>
+        </v-expansion-panel-text>
+      </v-expansion-panel>
+    </v-expansion-panels>
+  </div>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss">
 @use '@/styles/components' as *;
 @use '@/styles/meta' as *;
 
 .course-container {
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  width: 48rem;
-  border-radius: 4px;
-  margin: .5rem;
-
-  h3 {
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-
-  h4 {
-    font-size: 1rem;
-    line-height: 2rem;
-  }
-}
-
-.panel {
-  padding: 1rem;
   background-image: linear-gradient(to top, $tint, darken($tint, 10));
-  width: 100%;
 
-  .panel-title {
-    padding: .33rem;
-  }
-
-  .panel-text {
-    
-    & > * {
-      padding: 0;
-      padding-left: .75rem;
+  .course-info {
+    margin-inline: 1rem;
+    margin-top: .75rem;
+  
+    h3 {
+      font-size: 1.33rem;
+      line-height: 2rem;
+    }
+  
+    h4 {
       font-size: 1rem;
+      line-height: 2rem;
+    }
+  }
+  
+  .panel {
+    padding: .33rem;
+    background: transparent;
+    width: 100%;
+  
+    .panel-title {
+      padding: .33rem;
+      font-size: 1rem;
+    }
+  
+    .panel-text {
+      
+      & > * {
+        padding: 0;
+        padding-left: .75rem;
+        font-size: .85rem;
+      }
     }
   }
 }
