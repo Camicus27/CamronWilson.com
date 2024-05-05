@@ -4,7 +4,7 @@ import AllCoursework from '@/components/AllCoursework.vue'
 </script>
 
 <template>
-  <div class="centered">
+  <div class="wrapper">
     <router-link to="#coursework" v-scroll-to="'#coursework'" class="link skip-to">
       Skip to Notable Coursework
       <v-icon
@@ -15,9 +15,9 @@ import AllCoursework from '@/components/AllCoursework.vue'
         >
       </v-icon>
     </router-link>
+    <AllCourses />
+    <AllCoursework />
   </div>
-  <AllCourses />
-  <AllCoursework />
 </template>
 
 <style lang="scss">

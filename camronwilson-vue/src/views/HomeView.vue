@@ -3,9 +3,7 @@ import Bio from '@/components/Bio.vue'
 </script>
 
 <template>
-  <Bio />
+  <div class="wrapper home">
+    <Bio />
+  </div>
 </template>
-
-<style scoped lang="scss">
-
-</style>
