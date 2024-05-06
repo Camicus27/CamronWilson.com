@@ -1,5 +1,16 @@
 <script setup lang="ts">
 import Game from '@/components/Game.vue'
+import ZoomableSS from '@/components/ZoomableSS.vue'
+import holeyShootSS1 from '@/assets/games/holey-shoot-1.png'
+import holeyShootSS2 from '@/assets/games/holey-shoot-2.png'
+import holeyShootSS3 from '@/assets/games/holey-shoot-3.png'
+import holeyShootSS4 from '@/assets/games/holey-shoot-4.jpg'
+import camiquestSS1 from '@/assets/games/camiquest-1.jpg'
+import camiquestSS2 from '@/assets/games/camiquest-2.jpg'
+import camiquestSS3 from '@/assets/games/camiquest-3.jpg'
+import camiquestSS4 from '@/assets/games/camiquest-4.jpg'
+import roboSS1 from '@/assets/games/robo-1.jpg'
+import roboSS2 from '@/assets/games/robo-2.jpg'
 </script>
 
 <template>
@@ -54,10 +65,10 @@ import Game from '@/components/Game.vue'
         to work on it from time to time to make small adjustments and improvements when necessary.
       </template>
       <template #screenshots>
-        <img src="@/assets/games/holey-shoot-1.png" alt="Holey Shoot main menu area.">
-        <img src="@/assets/games/holey-shoot-2.png" alt="Holey Shoot grassy plains level.">
-        <img src="@/assets/games/holey-shoot-3.png" alt="Holey Shoot challenges menu.">
-        <img src="@/assets/games/holey-shoot-4.jpg" alt="Holey Shoot AppStore page.">
+        <ZoomableSS :img-src="holeyShootSS1" img-alt="Holey Shoot main menu area."/>
+        <ZoomableSS :img-src="holeyShootSS2" img-alt="Holey Shoot grassy plains level."/>
+        <ZoomableSS :img-src="holeyShootSS3" img-alt="Holey Shoot challenges menu."/>
+        <ZoomableSS :img-src="holeyShootSS4" img-alt="Holey Shoot AppStore page."/>
       </template>
     </Game>
     <Game>
@@ -84,10 +95,10 @@ import Game from '@/components/Game.vue'
         a ton in terms of game development, from <strong>managing art assets, to writing a good story, to managing an ever increasingly complex code base</strong>.
       </template>
       <template #screenshots>
-        <img src="@/assets/games/camiquest-1.jpg" alt="Camiquest itch.io page.">
-        <img src="@/assets/games/camiquest-2.jpg" alt="Camiquest opening sequence.">
-        <img src="@/assets/games/camiquest-3.jpg" alt="Camiquest NPC interaction.">
-        <img src="@/assets/games/camiquest-4.jpg" alt="Camiquest battle scene.">
+        <ZoomableSS :img-src="camiquestSS1" img-alt="Camiquest itch.io page."/>
+        <ZoomableSS :img-src="camiquestSS2" img-alt="Camiquest opening sequence."/>
+        <ZoomableSS :img-src="camiquestSS3" img-alt="Camiquest NPC interaction."/>
+        <ZoomableSS :img-src="camiquestSS4" img-alt="Camiquest battle scene."/>
       </template>
     </Game>
     <Game>
@@ -118,8 +129,8 @@ import Game from '@/components/Game.vue'
         box thinking to get some of the features working.
       </template>
       <template #screenshots>
-        <img src="@/assets/games/robo-1.jpg" alt="Robo Defense itch.io page.">
-        <img src="@/assets/games/robo-2.jpg" alt="Robo Defense entire codebase.">
+        <ZoomableSS :img-src="roboSS1" img-alt="Robo Defense itch.io page."/>
+        <ZoomableSS :img-src="roboSS2" img-alt="Robo Defense entire codebase."/>
       </template>
     </Game>
   </div>

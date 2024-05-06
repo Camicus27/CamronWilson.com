@@ -79,11 +79,6 @@
     margin-left: 3rem;
     margin-top: 1.25rem;
     width: 60%;
-  
-    img {
-      width: 100%;
-      height: auto;
-    }
   }
 }
 </style>
