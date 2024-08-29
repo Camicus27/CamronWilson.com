@@ -4,7 +4,17 @@ import Course from '@/components/Course.vue'
 
 <template>
   <div class="course-descr-wrapper centered">
-    <h1 class="section-title">Completed <em>University of Utah</em> Computer Science Courses</h1>
+    <h1>Completed <em>University of Utah</em> Computer Science Courses</h1>
+    <router-link to="#coursework" v-scroll-to="'#coursework'" class="link skip-to">
+      Skip to Notable Coursework
+      <v-icon
+        color="purple"
+        icon="mdi-debug-step-over"
+        size="small"
+        style="padding-bottom: 4px"
+        >
+      </v-icon>
+    </router-link>
     <div class="courses">
       <Course>
         <template #title>Object-Oriented Programming</template>
@@ -148,6 +158,11 @@ import Course from '@/components/Course.vue'
 <style scoped lang="scss">
 @use '@/styles/components' as *;
 @use '@/styles/meta' as *;
+
+.skip-to {
+  width: 90%;
+  margin-block: 1rem;
+}
 
 .course-descr-wrapper {
   margin-bottom: 2rem;

@@ -34,7 +34,7 @@ defineProps<{
 @use '@/styles/meta' as *;
 
 .img-thumbnail {
-  width: 95%;
+  width: 98%;
   height: auto;
 
   &:hover {

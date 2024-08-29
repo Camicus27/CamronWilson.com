@@ -10,7 +10,7 @@ const submissionSuccess = ref(false)
 const contactForm = ref<VForm | undefined>()
 
 const eventForm = ref({
-  _honey: "",
+  _honey: null,
   _captcha: false,
   _subject: "Contact Form Submission",
   name: "",
@@ -60,7 +60,7 @@ async function submitForm() {
 }
 
 function clearForm() {
-  eventForm.value._honey = ''
+  eventForm.value._honey = null
   eventForm.value.name = ''
   eventForm.value.email = ''
   eventForm.value.message = ''
@@ -69,7 +69,7 @@ function clearForm() {
 
 <template>
   <div class="wrapper centered">
-    <h1 class="section-title">
+    <h1>
       Contact Me!
     </h1>
     <h5>
@@ -89,8 +89,6 @@ function clearForm() {
         :rules="[(v) => !!v || 'A name is required.']"
         :disabled="waitingForSubmission || submissionSuccess"
         label="Name"
-        :focused="true"
-        :autofocus="true"
         tabindex="0"
         required>
       </v-text-field>

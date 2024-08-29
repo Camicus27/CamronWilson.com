@@ -15,7 +15,7 @@ import roboSS2 from '@/assets/games/robo-2.jpg'
 </script>
 
 <template>
-  <h1 class="section-title">
+  <h1>
     CamicusGames
     <v-btn
     style="padding: 0; margin-left: 1rem;"

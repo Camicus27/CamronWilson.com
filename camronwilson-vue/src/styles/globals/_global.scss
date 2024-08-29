@@ -39,15 +39,23 @@ body {
 }
 
 h1 {
+  width: 100%;
+  padding-bottom: .5rem;
   margin-block: .25rem;
   font-size: 2.75rem;
   line-height: 3rem;
   color: $purple-dark;
-  text-align: center;
+  border-bottom: 2px solid $purple-darker;
+  text-align: start;
+
+  em {
+      color: #cc0000;
+  }
 
   @include responsive($mobile-size) {
     font-size: 2rem;
     line-height: 2.25rem;
+    padding-bottom: .33rem;
   }
 }
 
@@ -64,7 +72,8 @@ h2 {
   font-size: 2rem;
   line-height: 2.5rem;
   color: $purple;
-  text-align: center;
+  border-bottom: 2px solid $purple-darker;
+  text-align: start;
 
   @include responsive($mobile-size) {
     font-size: 1.33rem;

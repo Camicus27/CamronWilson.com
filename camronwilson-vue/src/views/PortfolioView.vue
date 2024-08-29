@@ -5,38 +5,7 @@ import AllCoursework from '@/components/AllCoursework.vue'
 
 <template>
   <div class="wrapper">
-    <router-link to="#coursework" v-scroll-to="'#coursework'" class="link skip-to">
-      Skip to Notable Coursework
-      <v-icon
-        color="purple"
-        icon="mdi-debug-step-over"
-        size="small"
-        style="padding-bottom: 4px"
-        >
-      </v-icon>
-    </router-link>
     <AllCourses />
     <AllCoursework />
   </div>
 </template>
-
-<style lang="scss">
-@use '@/styles/components' as *;
-@use '@/styles/meta' as *;
-
-.section-title {
-  width: 95%;
-  padding-bottom: .33rem;
-  margin-bottom: .75rem;
-  border-bottom: 2px solid $purple-darker;
-  text-align: start;
-
-  em {
-      color: #cc0000;
-  }
-}
-
-.skip-to {
-  width: 95%;
-}
-</style>

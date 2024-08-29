@@ -20,7 +20,7 @@ import paddleTrafficSS4 from '@/assets/assignments/paddletraffic-profile.png'
 
 <template>
   <div class="coursework-wrapper centered">
-    <h1 id="coursework" class="section-title">Relevant Coursework</h1>
+    <h1 id="coursework">Relevant Coursework</h1>
     <div class="coursework-showcase">
       <Coursework>
         <template #title>Tank Wars</template>

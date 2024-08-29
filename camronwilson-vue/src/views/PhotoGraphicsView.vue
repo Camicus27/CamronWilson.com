@@ -4,7 +4,7 @@ import GraphicsCarousel from '@/components/GraphicsCarousel.vue'
 </script>
 
 <template>
-  <div class="wrapper photo-graphics">
+  <div class="wrapper centered">
     <h1>
       Photography & Graphic Design
     </h1>
@@ -28,26 +28,35 @@ import GraphicsCarousel from '@/components/GraphicsCarousel.vue'
         </p>
       </div>
     </div>
+
+    <h2>
+      Photography
+    </h2>
+    <div class="carousel-wrapper photo">
+      <PhotoCarousel />
+    </div>
+
+    <h2>
+      Graphic Design Artwork
+    </h2>
+    <div class="carousel-wrapper graphics">
+      <GraphicsCarousel />
+    </div>
   </div>
 
-  <h2>
-    Photography
-  </h2>
-  <div class="carousel-wrapper photo">
-    <PhotoCarousel />
-  </div>
-
-  <h2>
-    Graphic Design Artwork
-  </h2>
-  <div class="carousel-wrapper graphics">
-    <GraphicsCarousel />
-  </div>
+  
 </template>
 
 <style scoped lang="scss">
 @use '@/styles/components' as *;
 @use '@/styles/meta' as *;
+
+h2 {
+  width: 50%;
+  margin-block: 1rem;
+  padding-bottom: .33rem;
+  text-align: center;
+}
 
 .carousel-wrapper {
   width: 100%;
@@ -69,12 +78,6 @@ import GraphicsCarousel from '@/components/GraphicsCarousel.vue'
 
 .photo, .graphics {
   margin-bottom: 2rem;
-}
-
-.photo-graphics {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .descr-container {
