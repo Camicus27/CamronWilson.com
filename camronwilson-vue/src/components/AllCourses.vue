@@ -155,8 +155,14 @@ import Course from '@/components/Course.vue'
   .courses {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 1rem;
+    gap: 1rem;
     width: 80%;
+
+    @include responsive($mobile-size) {
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+    }
   }
 }
 </style>

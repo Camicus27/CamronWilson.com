@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Game from '@/components/Game.vue'
 import ZoomableSS from '@/components/ZoomableSS.vue'
+
 import holeyShootSS1 from '@/assets/games/holey-shoot-1.png'
 import holeyShootSS2 from '@/assets/games/holey-shoot-2.png'
 import holeyShootSS3 from '@/assets/games/holey-shoot-3.png'
@@ -142,5 +143,10 @@ import roboSS2 from '@/assets/games/robo-2.jpg'
 
 .games-showcase {
   margin-left: 3rem;
+
+  @include responsive($mobile-size) {
+    margin: 0;
+    width: 95%;
+  }
 }
 </style>

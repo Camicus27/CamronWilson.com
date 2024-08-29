@@ -9,9 +9,7 @@ import './styles/globals/_index.scss'
     <v-main>
       <CommonHeader />
       <RouterView v-slot="{ Component }">
-        <KeepAlive include="PhotoGraphicsView">
-          <component :is="Component" />
-        </KeepAlive>
+        <component :is="Component" />
       </RouterView>
     </v-main>
   </v-app>

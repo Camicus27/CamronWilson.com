@@ -44,10 +44,6 @@
         color: $accent;
     }
 
-    @include responsive($thin-size) {
-        font-size: 1.15rem;
-    }
-
     @include responsive($mobile-size) {
         padding: .2rem .25rem;
         margin: .2rem .5rem;

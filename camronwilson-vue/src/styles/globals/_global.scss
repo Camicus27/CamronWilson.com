@@ -78,3 +78,17 @@ p {
     line-height: 1.1rem;
   }
 }
+
+.v-overlay__content {
+  align-items: center;
+  justify-content: center;
+
+  img {
+    max-width: 65%;
+    max-height: 90vh;
+
+    @include responsive($mobile-size) {
+      max-width: 90vw;
+    }
+  }
+}

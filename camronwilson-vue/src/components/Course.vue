@@ -40,11 +40,21 @@
     h3 {
       font-size: 1.33rem;
       line-height: 2rem;
+
+      @include responsive($mobile-size) {
+        font-size: 1rem;
+        line-height: 1.2rem;
+      }
     }
   
     h4 {
       font-size: 1rem;
       line-height: 2rem;
+
+      @include responsive($mobile-size) {
+        font-size: .85rem;
+        line-height: 1rem;
+      }
     }
   }
   
@@ -56,6 +66,10 @@
     .panel-title {
       padding: .33rem;
       font-size: 1rem;
+
+      @include responsive($mobile-size) {
+        font-size: .85rem;
+      }
     }
   
     .panel-text {
@@ -64,6 +78,10 @@
         padding: 0;
         padding-left: .75rem;
         font-size: .85rem;
+
+        @include responsive($mobile-size) {
+          font-size: .75rem;
+        }
       }
     }
   }

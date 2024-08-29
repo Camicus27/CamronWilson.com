@@ -1,5 +1,21 @@
 <script setup lang="ts">
 import Coursework from '@/components/Coursework.vue'
+import ZoomableSS from '@/components/ZoomableSS.vue'
+
+import tankWarsSS1 from '@/assets/assignments/TankWars1.jpg'
+import tankWarsSS2 from '@/assets/assignments/TankWars2.jpg'
+import tankWarsSS3 from '@/assets/assignments/TankWars3.jpg'
+import algorithmsSS1 from '@/assets/assignments/dynamic-programming.jpg'
+import algorithmsSS2 from '@/assets/assignments/mincut-maxflow.jpg'
+import algorithmsSS3 from '@/assets/assignments/kruskal.jpg'
+import webDevSS1 from '@/assets/assignments/hypo-grades.jpg'
+import webDevSS2 from '@/assets/assignments/assign-submiss.jpg'
+import webDevSS3 from '@/assets/assignments/assign-list.jpg'
+import webDevSS4 from '@/assets/assignments/grading.jpg'
+import paddleTrafficSS1 from '@/assets/assignments/paddletraffic-poster.png'
+import paddleTrafficSS2 from '@/assets/assignments/paddletraffic-map.png'
+import paddleTrafficSS3 from '@/assets/assignments/paddletraffic-matchmaking.png'
+import paddleTrafficSS4 from '@/assets/assignments/paddletraffic-profile.png'
 </script>
 
 <template>
@@ -24,9 +40,9 @@ import Coursework from '@/components/Coursework.vue'
           A top-down tank battle arena. You choose your tank and fight against other players in the server for the highest score! Collect power ups for a high powered laser shot. This project required a server/client structure with standard JSON to communicate information. It was created over a semester for Software Practice (CS3500) and was built from scratch using .NET and Windows Forms to create the executables.
         </template>
         <template #screenshots>
-          <img src="@/assets/assignments/TankWars1.jpg" alt="Tank Wars screenshot 1.">
-          <img src="@/assets/assignments/TankWars2.jpg" alt="Tank Wars screenshot 2.">
-          <img src="@/assets/assignments/TankWars3.jpg" alt="Tank Wars screenshot 3.">
+          <ZoomableSS :img-src="tankWarsSS1" img-alt="Tank Wars gameplay of firing a bullet."/>
+          <ZoomableSS :img-src="tankWarsSS2" img-alt="Tank Wars idling in an arena."/>
+          <ZoomableSS :img-src="tankWarsSS3" img-alt="Tank Wars select a tank color menu."/>
         </template>
       </Coursework>
       <Coursework>
@@ -47,9 +63,9 @@ import Coursework from '@/components/Coursework.vue'
           A collection of algorithmic code I wrote to solve various scenarios using advanced Computer Science topics such as Dynamic Programming, Memoization, and Graph theory (DFS, BFS, WFS, Dijkstra's Algorithm, etc.).
         </template>
         <template #screenshots>
-          <img src="@/assets/assignments/dynamic-programming.jpg" alt="Dynamic programming flow example.">
-          <img src="@/assets/assignments/mincut-maxflow.jpg" alt="A minimum cut maximum flow graph example.">
-          <img src="@/assets/assignments/kruskal.jpg" alt="Kruskal's algorithm example.">
+          <ZoomableSS :img-src="algorithmsSS1" img-alt="Dynamic programming flow example."/>
+          <ZoomableSS :img-src="algorithmsSS2" img-alt="A minimum cut maximum flow graph example."/>
+          <ZoomableSS :img-src="algorithmsSS3" img-alt="Kruskal's algorithm example."/>
         </template>
       </Coursework>
       <Coursework>
@@ -60,7 +76,7 @@ import Coursework from '@/components/Coursework.vue'
             size="small"
             variant="text"
             append-icon="mdi-open-in-new"
-            href="https://github.com/Camicus27/TankWars"
+            href="https://github.com/Camicus27/WebDev"
             target="_blank"
             >
             View project on GitHub
@@ -70,10 +86,10 @@ import Coursework from '@/components/Coursework.vue'
           A learning management system developed using Django with a SQLite database. The website boasts assignment submission and grading, authorizing users, and some javascript used to give extra functionality to tables and other views.
         </template>
         <template #screenshots>
-          <img src="@/assets/assignments/hypo-grades.jpg" alt="Javascript used to hypothesize grades with input fields.">
-          <img src="@/assets/assignments/assign-submiss.jpg" alt="An example assignment page with option to submit assignments.">
-          <img src="@/assets/assignments/assign-list.jpg" alt="Listing all current assignments pulled from database.">
-          <img src="@/assets/assignments/grading.jpg" alt="Instructor view for grading assignment submissions.">
+          <ZoomableSS :img-src="webDevSS1" img-alt="Javascript used to hypothesize grades with input fields."/>
+          <ZoomableSS :img-src="webDevSS2" img-alt="An example assignment page with option to submit assignments."/>
+          <ZoomableSS :img-src="webDevSS3" img-alt="Listing all current assignments pulled from database."/>
+          <ZoomableSS :img-src="webDevSS4" img-alt="Instructor view for grading assignment submissions."/>
         </template>
       </Coursework>
       <Coursework>
@@ -84,20 +100,20 @@ import Coursework from '@/components/Coursework.vue'
             size="small"
             variant="text"
             append-icon="mdi-open-in-new"
-            href="https://paddletraffic.net"
+            href="https://github.com/Camicus27/PaddleTraffic"
             target="_blank"
             >
-            Visit project's landing page
+            View project on GitHub
           </v-btn>
         </template>
         <template #description>
           A website designed to help Pickleball players find open courts near them. Find information about the courts in your area and see what courts are available in real time! Designed to remove the frustration of showing up to court only for it to be packed. You can also find players in your area to team up with or schedule matches.
         </template>
         <template #screenshots>
-          <img src="@/assets/assignments/paddletraffic-poster.png" alt="PaddleTraffic's pitch poster.">
-          <img src="@/assets/assignments/paddletraffic-map.png" alt="PaddleTraffic's pickleball court map.">
-          <img src="@/assets/assignments/paddletraffic-matchmaking.png" alt="PaddleTraffic's matchmaking services.">
-          <img src="@/assets/assignments/paddletraffic-profile.png" alt="PaddleTraffic's customizable profile page.">
+          <ZoomableSS :img-src="paddleTrafficSS1" img-alt="PaddleTraffic's pitch poster."/>
+          <ZoomableSS :img-src="paddleTrafficSS2" img-alt="PaddleTraffic's pickleball court map."/>
+          <ZoomableSS :img-src="paddleTrafficSS3" img-alt="PaddleTraffic's matchmaking services."/>
+          <ZoomableSS :img-src="paddleTrafficSS4" img-alt="PaddleTraffic's customizable profile page."/>
         </template>
       </Coursework>
     </div>
@@ -110,5 +126,10 @@ import Coursework from '@/components/Coursework.vue'
 
 .coursework-showcase {
   margin-left: 3rem;
+
+  @include responsive($mobile-size) {
+    margin: 0;
+    width: 95%;
+  }
 }
 </style>

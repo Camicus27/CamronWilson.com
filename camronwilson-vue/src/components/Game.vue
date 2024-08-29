@@ -36,6 +36,10 @@
   align-items: start;
   margin-bottom: 3rem;
 
+  @include responsive($mobile-size) {
+    align-items: center;
+  }
+
   .game-info {
     margin-inline: 1rem;
     margin-top: .75rem;
@@ -48,20 +52,29 @@
       width: 75%;
       border-bottom: 2px solid $purple-darker;
 
+      @include responsive($mobile-size) {
+        flex-direction: column;
+        width: 100%;
+      }
+
       h3 {
-        font-size: 1.33rem;
-        font-weight: 600;
+        font-size: 1.5rem;
+        font-weight: bold;
         line-height: 2rem;
       }
     
       h4 {
-        font-size: 1rem;
+        font-size: 1.25rem;
         line-height: 2rem;
       }
     }
   
     .game-description {
       width: 75%;
+
+      @include responsive($mobile-size) {
+        width: 100%;
+      }
 
       h5 {
         font-size: 1rem;
@@ -78,7 +91,12 @@
     gap: 1rem;
     margin-left: 3rem;
     margin-top: 1.25rem;
-    width: 60%;
+    width: 50%;
+
+    @include responsive($mobile-size) {
+      margin-left: 0;
+      width: 75%;
+    }
   }
 }
 </style>
